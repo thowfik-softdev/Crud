@@ -50,9 +50,6 @@ app.get("/get-unique/:id", async (req, res) => {
   res.send({ return: data, message: "Unique Data GET Success" });
 });
 
-
-
-
 // Post New Data
 // Post New Data
 app.post("/add", async (req, res) => {
@@ -96,7 +93,7 @@ app.post("/add", async (req, res) => {
 // Update Data
 app.put("/update-user", async (req, res) => {
   try {
-    const {userId, name, email, phone, password } = req.body;
+    const { userId, name, email, phone, password } = req.body;
 
     // Check if required fields are present
     const missingFields = [];
@@ -139,8 +136,7 @@ app.put("/update-user", async (req, res) => {
   }
 });
 
-
-// Delete data 
+// Delete data
 app.delete("/delete/:id", async (req, res) => {
   const id = req.params.id;
   console.log("Delete ID: ", id);
@@ -162,4 +158,4 @@ app.delete("/delete/:id", async (req, res) => {
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is Running on the port ${PORT}`);
-}); 
+});

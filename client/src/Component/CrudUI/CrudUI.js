@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
 const CrudUI = () => {
-  
   const [Profiles, setProfiles] = useState([]);
   console.log(Profiles);
 
