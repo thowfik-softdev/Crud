@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 
 const DynamicComplex = () => {
   const complexData = [
@@ -9,21 +9,34 @@ const DynamicComplex = () => {
       LastName: "Juhair",
       Age: 20,
       Attendance: [
-        { Subject1: [
+        {
+          Subject1: [
             { Day: "Present", Topic: "HTML" },
             { Day: "Absent", Topic: "CSS" },
             { Day: "Present", Topic: "JavaScript" }
-          ] },
-        { Subject2: [
+          ]
+        },
+        {
+          Subject2: [
             { Day: "Present", Topic: "BootStrap" },
             { Day: "Absent", Topic: "React" },
             { Day: "Present", Topic: "React bootstrap" }
-          ] },
-        { Subject3: [
+          ]
+        },
+        {
+          Subject3: [
             { Day: "Present", Topic: "Node" },
             { Day: "Absent", Topic: "MongoDB" },
             { Day: "Present", Topic: "AWS" }
-          ] },
+          ]
+        },
+        {
+          Subject4: [
+            { Day: "Present", Topic: "Next.js" },
+            { Day: "Absent", Topic: "GCP" },
+            { Day: "Present", Topic: "Azure" }
+          ]
+        }
       ]
     }
   ];
@@ -48,7 +61,7 @@ const DynamicComplex = () => {
   const extractSubjectData = () => {
     const [student] = complexData;
     const subjects = [];
-    student.Attendance.forEach(subjectAttendance => {
+    student.Attendance.forEach((subjectAttendance) => {
       const subjectName = Object.keys(subjectAttendance)[0];
       const subjectDetails = subjectAttendance[subjectName][0];
       subjects.push({
@@ -64,7 +77,11 @@ const DynamicComplex = () => {
       <button onClick={extractStudentDetails}>Extract Student Details</button>
       <button onClick={extractSubjectData}>Extract Subject Data</button>
 
-      <Tabs defaultActiveKey="Home" id="uncontrolled-tab-example" className="mb-3">
+      <Tabs
+        defaultActiveKey="Home"
+        id="uncontrolled-tab-example"
+        className="mb-3"
+      >
         <Tab eventKey="Home" title="Home">
           {/* Render Student Details */}
           <div>

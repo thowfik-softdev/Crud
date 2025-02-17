@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 const ObjectManipulation = () => {
   const [Count, setCount] = useState({ id: 0 });

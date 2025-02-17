@@ -1,5 +1,5 @@
 import React from "react";
-import {Tab,Tabs,Table} from "react-bootstrap";
+import { Tab, Tabs, Table } from "react-bootstrap";
 
 const ComplexStructure = () => {
   const complex = [
@@ -37,7 +37,7 @@ const ComplexStructure = () => {
   const Subject1 = complex[0]?.Attendance[0].Subject1;
   const Subject2 = complex[0]?.Attendance[1].Subject2;
   const Subject3 = complex[0]?.Attendance[2].Subject3;
-console.log(Subject2);
+  console.log(Subject2);
   return (
     <div>
       <Tabs
@@ -45,17 +45,17 @@ console.log(Subject2);
         transition={false}
         id="noanim-tab-example"
         className="mb-3"
-      > 
-        <Tab eventKey="home" title="Home"> 
+      >
+        <Tab eventKey="home" title="Home">
           <p>FirstName : {complex[0].FirstName}</p>
           <p>LastName : {complex[0].LastName}</p>
           <p>Age : {complex[0].Age}</p>
         </Tab>
-        {/* Attendance Section */} 
+        {/* Attendance Section */}
         <Tab eventKey="Attendance" title="Attendance">
-          <Tabs 
+          <Tabs
             defaultActiveKey="home"
-            transition={false} 
+            transition={false}
             id="noanim-tab-example"
             className="mb-3"
           >
@@ -81,7 +81,7 @@ console.log(Subject2);
               </Table>
             </Tab>
             <Tab eventKey="Subject2" title="Subject2">
-            <h4>Subject 2 Attendance</h4>
+              <h4>Subject 2 Attendance</h4>
               <Table striped bordered hover>
                 <thead>
                   <tr>
@@ -100,9 +100,9 @@ console.log(Subject2);
                   ))}
                 </tbody>
               </Table>
-            </Tab> 
+            </Tab>
             <Tab eventKey="Subject3" title="Subject3">
-            <h4>Subject 3 Attendance</h4>
+              <h4>Subject 3 Attendance</h4>
               <Table striped bordered hover>
                 <thead>
                   <tr>
