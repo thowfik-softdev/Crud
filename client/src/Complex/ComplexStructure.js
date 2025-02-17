@@ -37,7 +37,9 @@ const ComplexStructure = () => {
   const Subject1 = complex[0]?.Attendance[0].Subject1;
   const Subject2 = complex[0]?.Attendance[1].Subject2;
   const Subject3 = complex[0]?.Attendance[2].Subject3;
+
   console.log(Subject2);
+  
   return (
     <div>
       <Tabs

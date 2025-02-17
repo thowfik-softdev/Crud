@@ -1,8 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 import "./App.css";
-import GetApi from "./Component/Crud/GetApi";
-import PostApi from "./Component/Crud/PostApi";
 import ComplexStructure from "./Complex/ComplexStructure";
 import DynamicComplex from "./Complex/DynamicComplexStructure";
 import CrudUI from "./Component/CrudUI/CrudUI";
@@ -16,12 +14,6 @@ function App() {
       <div>
         <nav>
           <ul>
-            <li>
-              <Link to="/get-api">Get API</Link>
-            </li>
-            <li>
-              <Link to="/post-api">Post API</Link>
-            </li>
             <li>
               <Link to="/complex">Complex</Link>
             </li>
@@ -37,8 +29,6 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/get-api" element={<GetApi />} />
-          <Route path="/post-api" element={<PostApi />} />
           <Route path="/Complex" element={<ComplexStructure />} />
           <Route path="/dynamic-complex" element={<DynamicComplex />} />
           <Route path="/crud-ui" element={<CrudUI />} />
